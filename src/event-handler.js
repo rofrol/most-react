@@ -1,19 +1,22 @@
 import most from 'most';
 
-let ReactDOMMostify = {
+let EventHandler = {
 
-    mostifyEventHandler (name) {
+    create() {
 
         let emitEvent, stream;
 
         emitEvent = () => undefined;
-        this[name] = event => emitEvent(event);
 
         stream = most.create(add => emitEvent = add);
         stream.drain();
 
-        return stream;
+        return {
+
+            handler: event => emitEvent(event),
+            stream
+        };
     }
 };
 
-export default ReactDOMMostify;
+export default EventHandler;

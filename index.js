@@ -1,4 +1,4 @@
 module.exports = {
 
-    ReactDOMMostify: require('./lib/react-dom-mostify')
+    EventHandler: require('./lib/event-handler')
 };
