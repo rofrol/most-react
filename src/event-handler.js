@@ -14,7 +14,9 @@ let EventHandler = {
             source.pushStream(event);
         };
 
-        Object.assign(eventStream, Stream.prototype);
+        Object.keys(Stream.prototype)
+            .map(key => eventStream[key] = Stream.prototype[key]);
+
         Stream.call(eventStream, new MulticastSource(source));
 
         return eventStream;
