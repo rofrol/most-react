@@ -1,21 +1,23 @@
-import most from 'most';
+import { Stream } from 'most';
+import MulticastSource from 'most/lib/source/MulticastSource';
+
+import SubscriberSource from './subscriber-source';
 
 let EventHandler = {
 
     create() {
 
-        let emitEvent, stream;
+        let source = new SubscriberSource();
 
-        emitEvent = () => undefined;
+        let eventStream = function (event) {
 
-        stream = most.create(add => emitEvent = add);
-        stream.drain();
-
-        return {
-
-            handler: event => emitEvent(event),
-            stream
+            source.pushStream(event);
         };
+
+        Object.assign(eventStream, Stream.prototype);
+        Stream.call(eventStream, new MulticastSource(source));
+
+        return eventStream;
     }
 };
 

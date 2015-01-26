@@ -17,7 +17,7 @@ MostReact provides a set of utilities to work with Most.js and React:
 
 # EventHandler
 
-The `EventHandler` helper allows to create Most.js push-stream that can be injected as callback for React event handler. To create a handler use the create function of `EventHandler`.
+The `EventHandler` helper allows to create Most.js push-stream that can be injected as callback for React event handler. To create a handler use create method of `EventHandler`.
 
 ```
 let onClick = EventHandler.create();
@@ -33,11 +33,10 @@ let Button = React.createClass({
 
     componentWillMount() {
 
-        let onClick = EventHandler.create();
+        this._onClick = EventHandler.create();
 
-        this._onClick = onClick.handler;
-
-        onClick.stream.forEach(console.log.bind(console));
+        this._onClick
+            .forEach(console.log.bind(console));
     },
 
     render() {
