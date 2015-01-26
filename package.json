@@ -1,0 +1,33 @@
+{
+  "name": "most-react",
+  "version": "1.0.0",
+  "description": "ReactJS bindings for Most.js",
+  "homepage": "https://github.com/roman01la/most-react",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "6to5 -d lib src"
+  },
+  "keywords": [
+    "Most",
+    "Most.js",
+    "React",
+    "ReactJS"
+  ],
+  "author": {
+    "name": "Roman Liutikov",
+    "email": "roman01la@romanliutikov.com",
+    "url": "http://romanliutikov.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roman01la/most-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roman01la/most-react/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "6to5": "^2.13.7",
+    "most": "^0.10.2"
+  }
+}
