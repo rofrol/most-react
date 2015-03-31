@@ -5,7 +5,7 @@
   "homepage": "https://github.com/roman01la/most-react",
   "main": "index.js",
   "scripts": {
-    "prepublish": "6to5 -d lib src",
+    "prepublish": "babel -d lib src",
     "test": "tape test/*.js"
   },
   "keywords": [
@@ -28,8 +28,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "6to5": "^2.13.7",
-    "most": "^0.10.2",
-    "tape": "^3.4.0"
+    "babel": "^4.7.16",
+    "most": "^0.13.0",
+    "tape": "^3.5.0"
   }
 }
