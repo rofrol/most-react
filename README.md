@@ -3,10 +3,10 @@
 
 # Installation
 
-Install this module with npm: 
+Install this module with npm:
 
 ```
-npm install most-react
+npm i -S most-react
 ```
 
 # Usage
