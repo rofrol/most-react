@@ -3,13 +3,13 @@ import MulticastSource from 'most/lib/source/MulticastSource';
 
 import SubscriberSource from './subscriber-source';
 
-let EventHandler = {
+const EventHandler = {
 
     create() {
 
-        let source = new SubscriberSource();
+        const source = new SubscriberSource();
 
-        let eventStream = function (event) {
+        const eventStream = function (event) {
 
             source.pushStream(event);
         };

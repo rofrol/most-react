@@ -1,10 +1,13 @@
-let pushStream = (sink, event) => {
+const pushStream = (sink, event) => {
 
     let timestamp = Date.now;
 
     try {
+
         sink.event(timestamp, event);
-    } catch (error) {
+    }
+    catch (error) {
+
         sink.error(timestamp, error);
     }
 };
