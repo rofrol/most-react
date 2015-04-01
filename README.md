@@ -19,13 +19,13 @@ MostReact provides a set of utilities to work with Most.js and React:
 
 The `EventHandler` helper allows to create Most.js push-stream that can be injected as callback for React event handler. To create a handler use create method of `EventHandler`.
 
-```
+```javascript
 let onClick = EventHandler.create();
 ```
 
 Example:
 
-```
+```jsx
 import React from 'react';
 import { EventHandler } from 'most-react';
 
