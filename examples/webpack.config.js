@@ -14,7 +14,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://' + ADDRESS + ':' + PORT,
         'webpack/hot/only-dev-server',
-        path.join(__dirname, '/src/app.jsx')
+        path.join(__dirname, '/src/state-mixin-example.jsx')
     ],
     module: {
         loaders: [
@@ -24,7 +24,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/'),
         filename: 'app.js',
-        publicPath: '/'
+        publicPath: '/examples/'
     },
     resolve: {
         extensions: ['', '.js', '.jsx', '.es6']

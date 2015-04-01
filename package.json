@@ -37,6 +37,7 @@
     "react": "^0.13.1",
     "react-hot-loader": "^1.2.4",
     "tape": "^3.5.0",
+    "transducers-js": "^0.4.135",
     "webpack": "^1.7.3",
     "webpack-dev-server": "^1.8.0"
   }
