@@ -5,19 +5,24 @@ import StateMixin from '../../src/state-mixin';
 import m from 'most';
 import t from 'transducers-js';
 
+/* no mixins, ES6 classes-only solution */
+
 class StateMixinComponent extends React.Component {
 
   constructor() {
 
+    /* create event streams */
     this._onChange = EventHandler.create();
     this._onKeyDown = EventHandler.create();
 
+    /* get initial state */
     this.state = {
 
       value: '',
       out: false
     };
 
+    /* get state from transformed event stream */
     this._valueState = (
 
       this._onChange
@@ -29,6 +34,7 @@ class StateMixinComponent extends React.Component {
         ))
     );
 
+    /* get another state from transformed event stream */
     this._focusOutState = (
 
       this._onKeyDown
@@ -36,9 +42,11 @@ class StateMixinComponent extends React.Component {
         .map(() => ({ out: true }))
     );
 
+    /* apply StateMixin (see '../../src/state-mixin') */
     StateMixin.call(this);
   }
 
+  /* returns state stream, fired by StateMixin */
   getStateStream() {
 
     return m.merge(this._valueState, this._focusOutState);
