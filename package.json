@@ -29,7 +29,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "anybar-webpack": "^1.0.4",
     "babel": "^4.7.16",
     "babel-loader": "^4.2.0",
     "babel-runtime": "^4.7.16",
