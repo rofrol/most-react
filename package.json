@@ -29,15 +29,15 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "anybar-webpack": "^1.0.4",
-    "babel": "^4.7.16",
-    "babel-loader": "^4.2.0",
-    "babel-runtime": "^4.7.16",
-    "most": "^0.13.0",
-    "react": "^0.13.1",
-    "react-hot-loader": "^1.2.4",
+    "babel": "5.x",
+    "babel-loader": "5.x",
+    "babel-runtime": "5.x",
+    "most": "0.x",
+    "react": "0.x",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "1.x",
     "tape": "^3.5.0",
-    "webpack": "^1.7.3",
+    "webpack": "1.x",
     "webpack-dev-server": "^1.8.0"
   }
 }

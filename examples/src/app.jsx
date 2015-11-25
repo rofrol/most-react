@@ -1,10 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import EventHandler from '../../src/event-handler';
 
 class Wrapper extends React.Component {
 
   constructor() {
-
+    super();
     this.state = {
 
       ehClicks: 1
@@ -68,4 +69,4 @@ class EventHandlerComponent extends React.Component {
   }
 }
 
-React.render(<Wrapper />, document.body);
+ReactDOM.render(<Wrapper />, document.querySelector('#app'));

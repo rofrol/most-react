@@ -1,6 +1,5 @@
 var webpack = require('webpack'),
-    path = require('path'),
-    AnybarWebpackPlugin = require('anybar-webpack');
+    path = require('path');
 
 const ADDRESS = '0.0.0.0';
 const PORT = 3000;
@@ -31,7 +30,6 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
-        new AnybarWebpackPlugin()
+        new webpack.NoErrorsPlugin()
     ]
 };
